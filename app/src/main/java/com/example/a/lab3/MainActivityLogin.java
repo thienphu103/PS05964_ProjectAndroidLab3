@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,52 +49,27 @@ public class MainActivityLogin extends AppCompatActivity {
                 String text = txt1.getText().toString();
                 String pass = txt2.getText().toString();
                 if (text.equals("")) {
-                    txts1.setText("Enter User. Please!!!");
-                    txts1.setTextColor(Color.RED);
-                    txt1.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txts1.setText("");
-                            return false;
-                        }
-                    });
+                    txt1.setError("Enter User. Please!!!");
+
+
                 } else if (!text.equalsIgnoreCase("admin")) {
 
-                    txts1.setText("User is invalid.");
-                    txts1.setTextColor(Color.RED);
-                    txt1.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txts1.setText("");
-                            return false;
-                        }
-                    });
+                    txt1.setError("User is invalid.");
+
 
                 } else {
                     txts1.setText("User Ok");
                     txts1.setTextColor(Color.GREEN);
                 }
                 if (pass.equals("")) {
-                    txts2.setText("Enter Password. Please!!!");
-                    txts2.setTextColor(Color.RED);
-                    txt2.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txts2.setText("");
-                            return false;
-                        }
-                    });
+                    txt2.setError("Enter Password. Please!!!");
+
+
                 } else if (!pass.equalsIgnoreCase("123456")) {
 
-                    txts2.setText("Wrong Password.");
-                    txts2.setTextColor(Color.RED);
-                    txt2.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txts2.setText("");
-                            return false;
-                        }
-                    });
+                    txt2.setError("Wrong Password.");
+ ;
+
 
                 } else {
                     txts2.setText("Password Ok");
