@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--LinearLayout : horizontal-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="377dp"
+        android:layout_height="256dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="576dp"
+            android:layout_weight="1"
+            android:background="#FF0000"
+            android:text="RED"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="-189dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0099CC"
+            android:text="BLUE"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:background="#FFFF00"
+            android:text="YELLOW"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00FF00"
+            android:text="GREEN"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="-43dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:layout_weight="0.64" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF99FF"
+            android:text="PINK"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!--LinearLayout : vertical-->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="377dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="256dp"
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:text="RED" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:textColor="#0099CC"
+            android:layout_height="wrap_content"
+            android:text="BLUE" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:textColor="#FFFF00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YELLOW" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF00"
+
+            android:text="GREEN" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:textColor="#FF99FF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PINK" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
