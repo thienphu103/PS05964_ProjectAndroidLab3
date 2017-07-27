@@ -3,20 +3,19 @@ package com.example.a.lab3;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityRegister extends AppCompatActivity {
     EditText txtN, txtP, txtRP, txtF, txtE, txtT;
     TextView txt1,txt2,txt3,txt4,txt5,txt6;
 Button btn,btnR;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_register);
         txtN = (EditText) findViewById(R.id.txtName);
         txtP = (EditText) findViewById(R.id.txtPass);
         txtRP = (EditText) findViewById(R.id.txtRePass);
@@ -48,25 +47,11 @@ Button btn,btnR;
                 String text6 = txtT.getText().toString();
 
                 if (text1.equals("")) {
-                    txt1.setText("Enter User. Please!!!");
-                    txt1.setTextColor(Color.RED);
-                    txtN.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt1.setText("");
-                            return false;
-                        }
-                    });
+                    txtN.setError("Enter User. Please!!!");
+
                 }else if (!(text1.length()<13&&text1.length()>5)) {
-                    txt1.setText("User must have at 6-12 characters");
-                    txt1.setTextColor(Color.RED);
-                    txtN.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt1.setText("");
-                            return false;
-                        }
-                    });
+                    txtN.setError("User must have at 6-12 characters");
+
 
                 } else {
                     txt1.setText("User Ok");
@@ -75,54 +60,26 @@ Button btn,btnR;
                 }
 
                 if (text2.equals("")||text2.length()<16&&text2.length()<7) {
-                    txt2.setText("Pass must have at 8-15 characters");
-                    txt2.setTextColor(Color.RED);
-                    txtP.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt2.setText("");
-                            return false;
-                        }
-                    });
+                    txtP.setError("Pass must have at 8-15 characters");
+
                 } else {
                     txt2.setText("Password Ok");
                     txt2.setTextColor(Color.GREEN);
                 }
                 if (text3.equals("")||text3.length()<16&&text2.length()<7) {
-                    txt3.setText("Pass must have at 8-15 characters");
-                    txt3.setTextColor(Color.RED);
-                    txtRP.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt3.setText("");
-                            return false;
-                        }
-                    });
+                    txtRP.setError("Pass must have at 8-15 characters");
+
                 } else if (!text3.equalsIgnoreCase(text2)) {
-                    txt3.setText("Does not match password.");
-                    txt3.setTextColor(Color.RED);
-                    txtRP.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt3.setText("");
-                            return false;
-                        }
-                    });
+                    txtRP.setError("Does not match password.");
+
                 }else {
                     txt3.setText("Password Ok");
                     txt3.setTextColor(Color.GREEN);
                 }
 
                 if (text4.equals("")) {
-                    txt4.setText("Enter Full Name. Please!!!");
-                    txt4.setTextColor(Color.RED);
-                    txtF.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt4.setText("");
-                            return false;
-                        }
-                    });
+                    txtF.setError("Enter Full Name. Please!!!");
+
 
 
                 } else {
@@ -132,15 +89,8 @@ Button btn,btnR;
                 }
 
                 if(!(text5.matches(emailtest))) {
-                        txt5.setText("Email in invalid format!!!");
-                        txt5.setTextColor(Color.RED);
-                        txtE.setOnTouchListener(new View.OnTouchListener() {
-                            @Override
-                            public boolean onTouch(View v, MotionEvent event) {
-                                txt5.setText("");
-                                return false;
-                            }
-                    });
+                        txtE.setError("Email in invalid format!!!");
+
 
                 } else {
                     txt5.setText("Email Ok");
@@ -149,15 +99,8 @@ Button btn,btnR;
                 }
 
                 if (!(text6.matches(teltest))) {
-                    txt6.setText("Tel in invalid format!!!");
-                    txt6.setTextColor(Color.RED);
-                    txtT.setOnTouchListener(new View.OnTouchListener() {
-                        @Override
-                        public boolean onTouch(View v, MotionEvent event) {
-                            txt6.setText("");
-                            return false;
-                        }
-                    });
+                    txtT.setError("Tel in invalid format!!!");
+
 
                 } else {
                     txt6.setText("Tel Ok");
